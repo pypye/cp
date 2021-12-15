@@ -1,0 +1,11 @@
+#Pye
+
+from heapq import heappop, heappush
+
+q = []
+heappush(pq, 2)
+heappush(pq, 1)
+heappush(pq, 9)
+heappush(pq, 4)
+print(len(q))
+print(heappop(pq))

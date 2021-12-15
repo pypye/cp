@@ -1,0 +1,8 @@
+ans, posx, posy = 1e18, 0, 0
+def find(x, y):
+    global ans, posx, posy
+    if gcd(x, y) == 1:
+       if ans > max(x, y):
+           ans = max(x, y)
+           posx = x
+           posy = y

@@ -1,0 +1,12 @@
+#bin to dec
+binary_string = '11111111'
+>>> int(binary_string, 2)
+
+#dec to bin
+decimal_number = 255
+>>> "{:b}".format(decimal_number)
+
+#dec to any base
+def convert(n, base):
+   s = "0123456789ABCDEF"
+   return s[n] if n < base else convert(n//base, base) + s[n%base]

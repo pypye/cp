@@ -1,0 +1,6 @@
+#Pye
+from sys import stdin, stdout
+from os import path
+
+if path.exists('inp.txt'):
+    stdin = open("inp.txt", "r")

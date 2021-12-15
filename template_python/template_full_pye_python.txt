@@ -1,0 +1,11 @@
+#Pye
+from sys import stdin, stdout
+from os import path
+from functools import cmp_to_key
+from dataclasses import dataclass
+from collections import deque
+from heapq import heappush, heappop
+from math import sqrt, gcd, log2
+
+if path.exists('inp.txt'):
+    stdin = open("inp.txt", "r")

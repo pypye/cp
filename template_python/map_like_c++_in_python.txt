@@ -1,0 +1,13 @@
+#Pye
+#map in c++ is dictionary in python
+a = {}
+a[(1, 2)] = 3
+a["xyz"] = 4
+print(a["xyz"])
+if (1, 2) in a: #check index in map
+    print(-1)
+if (3, 4) not in a: #check index in map
+    print(1)
+
+#that is unordered map, use "from collections import OrderedDict" for ordered map
+a = OrderedDict()

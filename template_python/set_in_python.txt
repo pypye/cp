@@ -1,0 +1,8 @@
+#Pye
+a = set()
+a.add(1)
+a.add(4)
+a.add(3)
+print(a)
+a.remove(1)
+print(len(a))

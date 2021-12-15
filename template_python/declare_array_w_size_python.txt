@@ -1,0 +1,5 @@
+#Pye
+n = 100005
+a = [0 for i in range(n)] #1d array size n
+n, m = 10, 10
+a = [[0 for i in range(m)] for j in range(n)] #2d array with n row, m col

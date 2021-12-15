@@ -1,0 +1,13 @@
+#Pye
+from collections import deque
+
+q = deque()
+q.append(4) #push_back
+print(q)
+q.append(6)
+print(q)
+q.appendleft(2) #push_front
+print(q)
+print(len(q)) #size
+q.pop() #pop_back
+q.popleft() #popfront

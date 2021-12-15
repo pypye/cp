@@ -1,0 +1,11 @@
+#Pye
+from dataclasses import dataclass
+
+@dataclass
+class edge():
+    first: int
+    second: int
+
+a = []
+a.append(edge(4, 7))
+print(a[0].second)
