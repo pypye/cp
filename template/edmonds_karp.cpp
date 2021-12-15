@@ -11,7 +11,7 @@ struct data
 
 int n, m, st, ed, tr[maxn], qu[maxn];
 long long maxf = 0;
-vector <int> s[maxn];
+vector<int> s[maxn];
 
 data edge[maxm * 2];
 
@@ -44,7 +44,8 @@ int check()
             if (tr[v] == 0 && edge[id].c > edge[id].f)
             {
                 tr[v] = id;
-                if (v == ed) return 1;
+                if (v == ed)
+                    return 1;
                 qu[++r] = v;
             }
         }
@@ -77,7 +78,8 @@ int main()
     freopen("INP.txt", "r", stdin);
     freopen("OUT.txt", "w", stdout);
     inpa();
-    while (check()) run();
+    while (check())
+        run();
     cout << maxf;
     return 0;
 }

@@ -8,13 +8,13 @@ using namespace std;
 
 ll POW[maxn], hashT[maxn];
 
-
-ll getHashT(int i,int j) {
+ll getHashT(int i, int j)
+{
     return (hashT[j] - hashT[i - 1] * POW[j - i + 1] + MOD * MOD) % MOD;
 }
 
-
-int main() {
+int main()
+{
     // Input
     string T, P;
     cin >> T >> P;
@@ -27,19 +27,19 @@ int main() {
 
     // Precalculate base^i
     for (int i = 1; i <= lenT; i++)
-    	POW[i] = (POW[i - 1] * base) % MOD;
+        POW[i] = (POW[i - 1] * base) % MOD;
 
     // Calculate hash value of T[1..i]
     for (int i = 1; i <= lenT; i++)
-    	hashT[i] = (hashT[i - 1] * base + T[i] - 'a' + 1) % MOD;
+        hashT[i] = (hashT[i - 1] * base + T[i] - 'a' + 1) % MOD;
 
     // Calculate hash value of P
-    ll hashP=0;
+    ll hashP = 0;
     for (int i = 1; i <= lenP; i++)
-    	hashP = (hashP * base + P[i] - 'a' + 1) % MOD;
+        hashP = (hashP * base + P[i] - 'a' + 1) % MOD;
 
     // Finding substrings of T equal to string P
     for (int i = 1; i <= lenT - lenP + 1; i++)
-    	if (hashP == getHashT(i, i + lenP - 1))
-    		printf("%d ", i);
+        if (hashP == getHashT(i, i + lenP - 1))
+            printf("%d ", i);
 }

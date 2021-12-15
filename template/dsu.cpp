@@ -1,7 +1,7 @@
 //Dai Ca Di Hoc
 #include <bits/stdc++.h>
 #define sz(x) int(x.size())
-#define MIN(x,y) if (x < y) x = y
+#define MIN(x, y) if (x < y) x = y
 #define PB push_back
 #define mp make_pair
 #define F first
@@ -24,7 +24,7 @@ int n, m;
 long long ans;
 data a[maxm];
 int root[maxn];
-vector <data> kq;
+vector<data> kq;
 
 void nhap()
 {
@@ -45,33 +45,34 @@ int Get_root(int u)
 
 void Kruskal()
 {
-    sort(a+1, a+m+1, comp);
+    sort(a + 1, a + m + 1, comp);
     memset(root, 0, sizeof(root));
     ans = 0;
     for (int i = 1; i <= m; i++)
     {
         int p = Get_root(a[i].u);
         int q = Get_root(a[i].v);
-		if (p != q){
-			root[p] = q;
-			ans += a[i].w;
-			kq.PB(a[i]);
-		}
+        if (p != q)
+        {
+            root[p] = q;
+            ans += a[i].w;
+            kq.PB(a[i]);
+        }
     }
 }
 
 void Ghikq()
 {
     cout << ans << endl;
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n - 1; i++)
         cout << kq[i].u << " " << kq[i].v << endl;
 }
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-    freopen(Task".inp", "r", stdin);
-    freopen(Task".out", "w", stdout);
+    ios_base::sync_with_stdio(0);
+    freopen(Task ".inp", "r", stdin);
+    freopen(Task ".out", "w", stdout);
     nhap();
     Kruskal();
     Ghikq();
